@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp_page</title>
+    <style>
+        td {
+            width: 300px;
+            display: flex;
+        }
+
+        input {
+            box-sizing: border-box;
+            flex: 1;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        table {
+            border-spacing: 12px 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Sign UP</h3>
+    <form>
+        <fieldset>
+            <legend>essential info.</legend>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td style="gap: 4px;">
+                        <input type="text" name="id" placeholder="max length 10">
+                        <button type="button" name="duplicate_check_btn">duplicate check</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>PASSWORD</th>
+                    <td>
+                        <input type="password" name="password" placeholder="length over 8 use only english, number"
+                            style="width: 100%;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>PASSWORD CHECK</th>
+                    <td>
+                        <input type="password" name="password_check" style="width: 100%;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Email</th>
+                    <td style="gap: 4px;">
+                        <input type="email" name="email">
+                        <select name="email_type">
+                            <option selected>input self</option>
+                            <option value="goole">@gmail.com</option>
+                            <option value="naver">@naver.com</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>additional info.</legend>
+            profile image <input type="file" name="profile_img"> <br>
+            <br>
+
+            gender :
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label> <br>
+            <br>
+
+            birth : <input type="date" name="birth"> <br>
+            <br>
+
+            hobby<br>
+            <label>
+                <input type="checkbox" name="hobby" value="baseball"> baseball
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="basketball"> basketball
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="football"> football
+            </label> <br>
+
+            <label>
+                <input type="checkbox" name="hobby" value="study"> study
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="music"> music
+            </label> <br>
+
+            <label>
+                <input type="checkbox" name="hobby" value="music"> option
+                <input type="text" name="hobby_option">
+            </label> <br>
+            <br>
+
+            introduce<br>
+            <textarea style="resize: none;" name="self"></textarea>
+
+            <br>
+        </fieldset>
+        <button type="button" name="signUp_complete_btn">finish</button>
+        <button type="button" name="reset_btn">reset</button>
+        <button type="button" name="back_btn">back</button>
+    </form>
+</body>
+
+</html>

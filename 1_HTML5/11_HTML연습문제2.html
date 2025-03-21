@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>supply_message_page</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>supplier info.</legend>
+            <ol>
+                <li>
+                    supplier : <input type="text" name="supplier_name"> <br>
+                </li> <br>
+
+                <li>
+                    email : <input type="email" name="supplier_email" placeholder="answer@gmail.com"> <br>
+                </li> <br>
+
+                <li>
+                    homepage : <input type="url" name="supplier_domain" value="https://"> <br>
+                </li> <br>
+
+                <li>
+                    location : 
+                    <select name="supplier_local">
+                        <option value="supplier_local_busan">Busan</option>
+                        <option value="supplier_local_incheon">Incheon</option>
+                        <option value="supplier_local_Seoul">Seoul</option>
+                    </select> <br>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>supply info.</legend>
+            <ul>
+                <li>
+                    item : <input type="text" name="supply_item">
+                </li> <br>
+
+                <li>
+                    quantity : <input type="number" name="supply_quantity" placeholder="min: 100">
+                </li> <br>
+
+                <li>
+                    grade : <input type="range" name="supply_grade">
+                </li> <br>
+
+                <li>
+                    option : 
+                    <textarea name="self"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <button>send message</button>
+    </form>    
+</body>
+</html>

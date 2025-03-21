@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza_order_page</title>
+</head>
+<body>
+
+    <form>
+        client : <input type="text" name="client_name"> <br>
+        <br>
+        phone : <input type="tel" name="client_phone"> <br>
+        <br>
+        E-amil : <input type="email" name="client_email"> <br>
+        <br>
+        select pizza : 
+        <select name="pizza_type">
+            <option value="cheese_pizza">cheese</option>
+            <option value="pepperoni_pizza">pepperoni</option>
+            <option value="potato_pizza">potato</option>
+            <option selected disabled hidden>select pizza</option>
+        </select>
+        
+        <!-- pizza size select tab -->
+        <fieldset>
+            <legend>pizza size</legend>
+            <br>
+            
+            <label>
+                <input type="radio" name="pizza_size" value="pizza_size_small"> Small
+            </label> <br>
+            <br>
+
+            <label>
+                <input type="radio" name="pizza_size" value="pizza_size_medium"> Medium
+            </label> <br>
+            <br>
+
+            <label>
+                <input type="radio" name="pizza_size" value="pizza_size_large"> Large
+            </label> <br>
+            <br>
+        </fieldset>
+
+        <!-- topping select tab -->
+        <fieldset>
+            <legend>topping options</legend>
+            <br>
+
+            <label>
+                <input type="checkbox" name="topping" value="add_bacon"> Bacon
+            </label> <br>
+            <br>
+
+            <label>
+                <input type="checkbox" name="topping" value="add_cheese"> Cheese
+            </label> <br>
+            <br>
+            
+            <label>
+                <input type="checkbox" name="topping" value="add_onion"> Onion
+            </label> <br>
+            <br>
+
+            <label>
+                <input type="checkbox" name="topping" value="add_mushroom"> Mushroom
+            </label> <br>
+            <br>
+        </fieldset>
+        <br>
+
+        delivery time : <input type="time" name="delivery_time"> <br>
+        <br>
+
+        options : <textarea name="self"></textarea> <br>
+        <br>
+        
+        <button>order</button>
+    </form>
+</body>
+</html>
