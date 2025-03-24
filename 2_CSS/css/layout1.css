@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+.area1{background-color: red;}
+.area2{background-color: orange;}
+.area3{background-color: yellow;}
+.area4{background-color: green;}
+.area5{background-color: blue;}
+
+.inline{
+    display: inline;
+}
+
+.block{
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+
+    /* display: none; */
+}
+
+/* 감싸는 영역 요소 */
+#container-1 {
+    border: 3px solid black;
+    width: 323px;
+    height: 472px;
+}
+
+/* 내부에 영역을 분할할 요소 */
+.div-1 {
+    height: 50%;
+    width: 100%;
+
+    border: 1px dashed hotpink;
+}
+
+#container-1 > .div-1:first-of-type {
+    height: 30%;
+    background-color: red;
+}
+
+#container-1 > .div-1:last-of-type {
+    height: 70%;
+    background-color: blue;
+}
+
+/* 상하 삼분할 */
+#container-2 {
+    box-sizing: border-box;
+    height: 500px;
+    width: 200px;
+    border: 1px solid #000;
+}
+
+/* 
+    block 형식의 요소는 별도의
+    width가 지정되지 않으면 항상 부모요소의 100%
+*/
+
+#container-2 > .div-2:first-of-type {
+    box-sizing: border-box;
+    height: 20%;
+    width: 100%;
+    border: 1px dashed red;
+    background-color: aqua;
+}
+
+#container-2 > .div-2:nth-of-type(2) {
+    box-sizing: border-box;
+    height: 30%;
+    width: 100%;
+    border: 1px dashed red;
+    background-color: plum;
+}
+
+#container-2 > .div-2:last-of-type {
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    border: 1px dashed red;
+    background-color: pink;
+}
+
+/* 좌우 분할 */
+#container-3 {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+}
+
+.div-3 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    border: 1px dashed black;
+    background-color: bisque;
+}
+
+.div-3:last-of-type {
+    background-color: azure;
+}
+
+.div-4 {
+    border: 3px solid black;
+    height: 100px;
+}
+
+#test4 {
+    background-color: aqua;
+    /* display: none; */
+    visibility: hidden;
+}

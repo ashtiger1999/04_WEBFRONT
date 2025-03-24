@@ -46,7 +46,7 @@ p[name="name-1"] {
 }
 
 #active-test:active {
-    background-color: red;
+    background-color: pink;
 }
 
 #hover-test:hover {

@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+}
+
+.content {
+    width: 150px;
+    height: 150px;
+
+    /* 
+        width / height 속성
+        기본적으로 content 영역의
+        크기를 지정하는 속성
+    */
+}
+
+.border {
+    border: 10px solid red;
+}
+
+.padding {
+    padding: 30px;
+}
+
+.margin {
+    margin: 50px;
+}
+
+#m1 {
+    margin: 100px;
+}
+
+.padding-test {
+    /* 
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 100px; 
+    */
+
+    /* 
+        padding 속성 :
+        작성법에 따라 padding 특정 방향에
+        크기를 지정할 수 있다.
+    */
+
+    /* 값 1개 : 상하좌우 */
+    /* 값 2개 : 상하 좌우 */
+    /* 값 3개 : 상 좌우 하 */
+    /* 값 4개 : 상 우 하 좌 */
+
+    padding: 10px 20px 30px 40px;
+}
+
+.border-test {
+    /* 
+        border 속성은 상하좌우 방향을 별도로 지정할 수 없음
+    */
+    border-top: 3px solid black;
+    border-right: 5px dashed magenta;
+    border-bottom: 7px dotted blue;
+    border-left: 9px double orange;
+}
+
+.box-container {
+    border: 2px solid black;
+    width: 500px;
+    height: 300px;
+}
+
+.margin-auto {
+    margin: auto;
+    margin-top: 100px;
+    /* 
+        좌우 요소간의 간격을 자동으로 지정하여 가운데 정렬
+        -> 상하좌우 동시에 지정하는 속성이므로 이전의 margin 속성에 덮어씌워진다.
+    */
+}
+
+#box-sizing {
+    /* 
+        테두리 10px, 패딩 20px, 내용 나머지 전체 요소 크기가 너비/높이 300px인 정사각형
+    */
+    border: 10px solid black;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+
+    box-sizing: border-box;
+    /* 
+        width/height에 padding, border가 포함됨
+    */
+}
