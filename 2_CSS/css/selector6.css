@@ -1,0 +1,31 @@
+/* 1순위 : !important */
+div {
+    background-color: plum !important;
+}
+
+/* 2순위 : inline-style 속성 */
+
+/* 3순위 : 아이디 선택자 */
+#test1 {
+    background-color: black;
+}
+
+/* 4순위 : 클래스 선택자 */
+.cls1 {
+    background-color: green;
+}
+
+.cls2 {
+    background-color: blue;
+    /* 
+        동일한 우선순위에선
+        아래에 작성된 설정값이 적용됨.
+    */
+}
+
+/* 5순위 : 태그 선택자 */
+div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
