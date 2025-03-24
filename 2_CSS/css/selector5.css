@@ -1,0 +1,42 @@
+/* :only-child */
+#test1 > p:only-child {
+    background-color: blue;
+}
+
+/* only-of-type */
+#test2 > p:only-of-type {
+    background-color: red;
+}
+
+/* :empty */
+#test3 > p:empty {
+    background-color: orange;
+    height: 30px;
+}
+
+#test3 > p:not(:empty) {
+    background-color: yellow;
+    height: 30px;
+}
+
+/* 나열 선택자 */
+.test4-3, [id^="test4"] {
+    background-color: pink;
+}
+
+/* 특정 요소 내부에 있는 특정 클래스만 선택하기 */
+
+/* test5-1 후손 중 클래스가 c5인 요소를 선택 */
+#test5-1 .c5 {
+    background-color: aqua;
+}
+
+/* #test5-2의 자식 중 클래스가 c5인 li요소만 선택 */
+#test5-2 > li.c5 {
+    background-color: plum;
+}
+
+/* 클래스가 여러개인 요소만 선택 */
+.test6.c6 {
+    background-color: pink;
+}

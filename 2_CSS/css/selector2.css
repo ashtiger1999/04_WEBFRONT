@@ -33,3 +33,73 @@ p[name="name-1"] {
 #test-div p {
     background-color: yellow;
 }
+
+/* 반응 선택자 */
+.div-cls {
+    border : 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+#active-test:active {
+    background-color: red;
+}
+
+#hover-test:hover {
+    background-color: red;
+    width: 240px;
+    height: 30px;
+}
+
+#hover-test {
+    /* 
+        #hover-test 요소가 변화를 일으키면
+        1000ms후 변화 완료
+
+        트랙지션(transition) : HTML 요소가
+        한 상태에서 다른 상태로 변할 때,
+        변화를 부드럽게 만들어주는 애니메이션 효과.
+        -> 점진적으로 n초에 걸쳐서 변화
+    */
+    transition-duration: 1000ms;
+}
+
+/* 상태 선택자 */
+#focus-test:focus {
+    background-color: red;
+}
+
+[name="fruit"]:checked {
+    width: 30px;
+    height: 30px;
+    border: 2px solid red;
+    color: red;
+
+    /* 
+        CHECK BOX의 기본 테마는 변경 불가능
+        -> appearance를 none으로 변경하고
+        가상요소를 디자인 하는 방법으로
+        대체 가능
+    */
+}
+
+#test-div2 > :enabled {
+    background-color: lightgreen;
+}
+
+#test-div2 > :disabled {
+    background-color: rgb(255, 183, 183);
+}
+
+/* 동위 선택자 */
+#div1+div {
+    background-color: red;
+}
+
+#div3~div {
+    background-color: blue;
+}
