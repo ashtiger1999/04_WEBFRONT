@@ -1,0 +1,414 @@
+div {
+    outline: 1px solid black;
+    box-sizing: border-box;
+    /* content + padding + border 합으로 width/height 지정 */
+}
+
+.item {
+    width: 75px;
+    height: 75px;
+}
+
+.item1 {
+    background-color: red;
+}
+
+.item2 {
+    background-color: orangered;
+}
+
+.item3 {
+    background-color: orange;
+}
+
+.item4 {
+    background-color: yellow;
+}
+
+.item5 {
+    background-color: yellowgreen;
+}
+
+.item6 {
+    background-color: green;
+}
+
+.item7 {
+    background-color: lightblue;
+}
+
+.item8 {
+    background-color: blue;
+}
+
+.item9 {
+    background-color: violet;
+}
+
+.flex-container {
+    height: 800px;
+
+    display: flex;
+    /* 
+        item(자식태그)를 감싸는 요소(부모태그)의 형식을 flexbox로 변경
+        -> item들이 자동으로 정렬되며, 레이아웃을 쉽게 조정할 수 있음
+
+        자동 정렬 -> 가로/세로 정렬을 쉽게 조정 가능
+        공간 배분 -> 요소 간 간격을 자동으로 조정
+        반응형 레리아웃 -> 화면 크기에 따라 유연하게 조정
+    */
+
+    /* 
+        flex-direction(부모 전용 속성) :
+        메인 축의 방량과 시작 위치를 지정하는 속성
+    */
+
+    /* 행 방향(가로, 기본 값) */
+    /* flex-direction: row; */
+
+    /* 행 방향 + 역순 */
+    /* flex-direction: row-reverse; */
+
+    /* 열방향(세로) */
+    /* flex-direction: column; */
+
+    /* 열방향 + 역순 */
+    /* flex-direction: column-reverse; */
+
+    /* 
+        flex-wrap(부모 전용 속성) :
+        내부 item들을 포장하는 속성
+        item들이 강제로 한줄에 배치되게 할 지,
+        한 줄을 벗어나 여러줄로 배치할 것인지 지정
+    */
+
+    /* item을 한 줄로 배치(기본값) */
+    /* flex-wrap: nowrap */
+
+    /* item을 여러줄로 배치 */
+    /* flex-wrap: wrap; */
+    /* 각 행 사이의 빈 공간은 너비가 줄어들 때, item이 내려올 공간을 자동적으로 할당하는 것 */
+
+    /* item을 여러줄로 배치(역순) */
+    /* flex-wrap: wrap-reverse; */
+
+    /*
+        justify-content(부모 전용 속성) :
+        메인 축 방향으로 item의 정렬 방법을 조정함
+    */
+
+    /* 메인축 방향으로 flexbox 앞에서부터 정렬(기본값) */
+    /* justify-content: flex-start; */
+
+    /* 메인축 방향으로 flexbox 뒤에서부터 정렬 */
+    /* justify-content: flex-end; */
+
+    /* 메인축 방향 가운데로 정렬 */
+    /* justify-content: center; */
+
+    /* 양 끝쪽의 여백없이 사이 공간만을 일정한 간격으로 분배 */
+    /* justify-content: space-between; */
+
+    /* 아이템을 기준으로 모든 여백을 일정한 간격으로 분배 */
+    /* justify-content: space-around; */
+
+    /* 모든 여백을 동일하게 분배 */
+    /* justify-content: space-evenly; */
+
+    /* 
+        align-items(부모 전용 속성):  
+        item들을 교차죽 방향으로 정렬하는 방법을 지정하는 속성
+    */
+
+    /* 교차축 앞에서부터 정령(기본값) */
+    /* align-items: flex-start; */
+
+    /* 교차축 가운데 정렬 */
+    /* align-items: center; */
+
+    /* 교차축 끝에서부터 정렬 */
+    /* align-items: flex-end; */
+}
+
+#con {
+    width: 450px;
+    height: 450px;
+
+    display: flex;
+
+    /* 메인 축 가운데 정렬 */
+    justify-content: center;
+
+    /* 교차 축 가운데 정렬 */
+    align-items: center;
+}
+
+#item-center {
+    width: 80px;
+    height: 80px;
+
+    background-color: red;
+}
+
+/* item(자식)에게 주는 flex 속성 */
+
+/* 
+    flex-basis : item의 기본 크기(초기크기)를 결정하는 속성
+    부모를 기준으로 자식이 얼마만큼 그 크기를 점유하겠는가?
+
+    width와 비슷하지만, flex-grow, flex-shrink에 의해
+    유동적으로 변경될 수 있음
+
+    auto; (기본값) - 요소의 본래 크기만큼 가짐(75 * 75)
+    0 : 본래 요소의 크기 중 content만을 남겨두고 차지하는 영역 없음
+*/
+
+.basis-20 {
+    flex-basis: 20%;
+}
+
+.basis-30 {
+    flex-basis: 30%;
+}
+
+.basis-50 {
+    flex-basis: 50%;
+}
+
+/* flex-grow */
+/* 0 (기본값)
+    요소가 추가적인 가용공간(남은 공간)을 차지하지 않음
+    자신의 초기 크기만 유지
+
+    설정값은 여백의 비율로 작성하고 적용됨
+*/
+.grow1 {
+    flex-grow: 0;
+}
+
+.grow2 {
+    flex-grow: 2;
+}
+
+.grow3 {
+    flex-grow: 1;
+}
+
+/* flex-shrink */
+/* 1 (기본값)
+    컨테이너의 크기가 줄어들면
+    다른 요소들(자식요소)과 함께
+    비율적으로 축소될 수 있음을 의미
+*/
+/* flex-shrink: N
+    -> N값 비율대로 줄어듦
+*/
+
+.shrink1 {
+    flex-shrink: 0;
+    /* 0 : 줄어들지 않음
+        컨테이너의 공간이 부족해도 본인의 원래 크기 유지
+    */
+}
+
+.shrink2 {
+    flex-shrink: 2;
+}
+
+/* flex */
+/* 
+    flexBox 컨테이너 내에서 아이템의 크기와 배율을 설정하는 속성
+    !~3개의 값을 입력
+*/
+
+.flex1 {
+    flex: 1;
+    /* 
+        flex-glow : 1; 
+        flex-shrink : 1;
+        flex-basis : 0;
+    */
+    /*
+        flex-grow : 1;
+        남은 가용 공간은 1 비율로 차지
+
+        flex-shrink : 1;
+        컨테이너 크기가 부족할때 줄어들면 1 비율로 축소
+
+        flex-basis : 0;
+        요소의 content 크기만큼만 초기 크기를 차지
+    */
+}
+
+.flex2 {
+    flex: 1 0 auto;
+    /* 
+        flex-glow : 1; 
+        flex-shrink : 0;
+        flex-basis : auto;
+    */
+    /*
+        flex-grow : 1;
+        남은 가용 공간은 1 비율로 차지
+
+        flex-shrink : 0;
+        축소되지 않음
+
+        flex-basis : auto;
+        요소의 기본 크기만큼만 초기 크기를 차지
+    */
+}
+
+.flex3 {
+    flex: 1 50%;
+    /* 
+        flex-glow : 1; 
+        flex-shrink : 1;
+        flex-basis : 50%;
+    */
+    /*
+        flex-grow : 1;
+        남은 가용 공간은 1 비율로 차지
+
+        flex-shrink : 1;
+        컨테이너 크기가 부족할때 줄어들면 1 비율로 축소
+
+        flex-basis : 50%;
+        flexbox 크기의 50%만큼 초기 크기 차지
+    */
+}
+
+/* order */
+/* 0; (기본값)
+    양수 ~ 음수 설정 가능
+    값이 작은 요소가 먼저 배치되고,
+    큰 요소가 나중에 배치됨
+*/
+
+.order:nth-child(1) {
+    order: 1;
+}
+
+.order:nth-child(2) {
+    order: -1;
+}
+
+.order:nth-child(3) {
+    order: 0;
+}
+
+/* flex 연습문제 */
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    flex: 1 20%;
+    background-color: gray;
+}
+
+.body {
+    flex: 1 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-1 {
+    flex: 1 30%;
+    background-color: skyblue;
+}
+
+.content-2 {
+    flex: 1 50%;
+    background-color: tomato;
+}
+
+.content-3 {
+    flex: 1 20%;
+    background-color: bisque;
+}
+
+/* 중복 속성 */
+.container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.skyblue {
+    background-color: skyblue;
+}
+
+.cont {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.cont10 {
+    flex-basis: 10%;
+}
+
+.cont20 {
+    flex-basis: 20%;
+}
+
+.cont30 {
+    flex-basis: 30%;
+}
+
+.cont40 {
+    flex-basis: 40%;
+}
+
+.cont50 {
+    flex-basis: 50%;
+}
+
+.cont60 {
+    flex-basis: 60%;
+}
+
+.cont70 {
+    flex-basis: 70%;
+}
+
+.cont80 {
+    flex-basis: 80%;
+}
+
+/* 문제 4 */
+.box4 {
+    height: 50%;
+    align-self: flex-end;
+}
+
+.cont4 {
+    justify-content: space-between;
+}
