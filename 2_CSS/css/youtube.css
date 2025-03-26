@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid #000; */
+    text-decoration: none;
+    color:#000;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    line-height: 1;
+    
+    border: none;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+}
+
+[class^="btn"] {
+    background-color: transparent;
+    border: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main {} */
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-items: center;
+    height: 56px;
+}
+
+header [class^="btn"] {
+    width: 40px;
+    height: 40px;
+}
+
+header > section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 100%;
+    padding: 18px 14px;
+}
+
+.logo > a {
+    height: 100%;
+    display: flex;
+    gap:4px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.btn-bars {
+    background-color: transparent;
+    border: none;
+}
+
+/* search */
+
+.search {
+    width: 732px;
+    height: 40px;
+    display: flex;
+}
+
+.search form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap:8px;
+}
+
+.search-left {
+    margin-left: 40px;
+    padding: 0 4px;
+    width: 640px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-inputBox {
+    margin-left: 32px;
+    padding-left: 16px;
+    width: 536px;
+    height: 40px;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.input-search {
+    width: 484px;
+    height: 24px;
+    padding: 1px 0;
+}
+
+.btn-search {
+    width: 64px;
+    height: 40px;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #ddd;
+}
+
+.btn-mic {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.search [class^="btn"] {
+    background-color: #f8f8f8;
+}
+
+.create {
+    width: 98px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    display: flex;
+    background-color: #f8f8f8;
+
+}
+
+.create > button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.create > button > .icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .userIcon img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+header section:last-child {
+    width: 214px;
+    display: flex;
+    justify-content: space-around;
+}
+
