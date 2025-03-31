@@ -139,7 +139,7 @@ function readValue() {
 
     bg.innerHTML += `<p><span>${input.value}</span></p>`;
 
-    bg.scrollTop = bg.scrollHeight;
+    bg.scrollTop = bg.scrollHeight;;
     // bg.scrollTop : 현재 스크롤 위치
     // (스크롤이 현재 얼마만큼 내려와 있는지를 나타냄)
 
