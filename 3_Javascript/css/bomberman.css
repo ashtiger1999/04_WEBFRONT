@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 12px 0;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#box {
+    width:500px;
+    height: 500px;
+    border: 1px solid #000;
+    overflow: hidden;
+    position: relative;
+}
+
+#bomberman {
+    position: absolute;
+    width: 50px;
+    margin: 0;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+}
+
+.bomb {
+    position: absolute;
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bomb img {
+    width: 100%;
+}
