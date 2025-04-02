@@ -1,3 +1,4 @@
+/*
 document.addEventListener("keydown", function (e) {
     console.log(e.key)
 })
@@ -46,5 +47,42 @@ const remove = () => {
     const boom = document.querySelectorAll(".bomb");
     for (let i = 0; i < boom.length; i++) {
         boom[i].innerHTML = "<img src='../../images/bomberman/boomm.png'>"
+    }
+};
+*/
+
+/* 답안 */
+let xPos=0;
+let yPos=0;
+
+document.addEventListener("keydown",function(e){
+    const bomberman = document.querySelector("#bomberman");
+
+    switch(e.key) {
+        case 'ArrowUp' : yPos -= 10; break;
+        case 'ArrowDown' : yPos += 10; break;
+        case 'ArrowLeft' : xPos -= 10; break;
+        case 'ArrowRight' : xPos += 10; break;
+        case 'x' : bomb(); break;
+        case 'z' : remove(); break;
+        default : return;
+    }
+
+    bomberman.style.transform = `translate(${xPos}px, ${yPos}px)`
+})
+
+const bomb = () => {
+    box.innerHTML +=
+        `<img 
+            src='../../images/bomberman/bomb.png' 
+            class='bomb' 
+            style='transform:translate(${xPos}px,${yPos}px);'
+        >`
+};
+
+const remove = () => {
+    const boom = document.querySelectorAll(".bomb");
+    for(let i=0; i<boom.length; i++){
+        boom[i].src = "../../images/bomberman/boomm.png";
     }
 };

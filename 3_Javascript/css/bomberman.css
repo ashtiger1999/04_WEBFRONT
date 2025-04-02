@@ -28,6 +28,7 @@ body {
     top: calc(50% - 25px);
 }
 
+/*
 .bomb {
     position: absolute;
     z-index: -1;
@@ -40,4 +41,13 @@ body {
 
 .bomb img {
     width: 100%;
+}
+*/
+
+.bomb {
+    position: absolute;
+    z-index: -1;
+    width: 30px;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
 }
