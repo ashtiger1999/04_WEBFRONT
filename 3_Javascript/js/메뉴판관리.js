@@ -32,7 +32,7 @@ updateBtn.addEventListener('click', () => {
     normalCon.classList.add('b-hidden');
     normalCon.classList.remove('b-show');
 
-    const regExp = /\d*/;
+    const regExp = /\d+/;
     const menus = document.querySelectorAll('.menu');
     const names = document.querySelectorAll('.menu-name');
     const prices = document.querySelectorAll('.menu-price');
@@ -88,7 +88,7 @@ exitBtn.addEventListener('click', () => {
     const priceInput = document.querySelectorAll('.menu-price-input');
 
     for (let i = 0; i < menus.length; i++) {
-        if (names[i].innerText.length == 0) {
+        if (nameInput[i].value.length == 0) {
             names[i].innerText = '미입력';
         } else {
             names[i].innerText = nameInput[i].value;
@@ -96,7 +96,7 @@ exitBtn.addEventListener('click', () => {
         names[i].classList.remove('b-hidden');
         names[i].classList.add('b-show');
 
-        if (prices[i].innerText.length == 0) {
+        if (priceInput[i].value.length == 0) {
             prices[i].innerText = '0원';
         } else {
             prices[i].innerText = priceInput[i].value + '원';

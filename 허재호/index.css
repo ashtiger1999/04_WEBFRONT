@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+hr { margin: 0 20px; }
+
+/* 문제 1 */
+
+div.con1 { margin: 20px; }
+
+.con1 fieldset { padding: 12px; }
+
+.con1 th { padding: 0 12px; }
+
+.con1 td { width: 300px; }
+
+.con1 td > * {
+    width: 100%;
+    padding: 4px;
+}
+
+.con1 td > textarea {
+    height: 100px;
+    resize: none;
+}
+
+.con1 button {
+    width: auto;
+    padding: 0 8px;
+    margin-top: 12px;
+}
+
+.con1 [type="file"] { padding-left: 0; }
+
+/* 문제 2 */
+
+.con2 table, .con2 th, .con2 td { border: 1px solid #000; }
+
+.con2 th {
+    background-color: lightsalmon;
+    color: #fff;
+}
+
+.con2 td { background-color: lemonchiffon; }
+
+.con2 { margin: 20px; }
+
+.con2 table, .con2 button { width: 100%; }
+
+.con2 .noBox, .con2 .viewBox { width: 5%; }
+
+.con2 .titleBox { width: auto; }
+
+.con2 .btnBox { width: 75px; }
+
+.con2 .idBox, .con2 .dateBox { width: 15%; }
